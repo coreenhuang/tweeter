@@ -14,13 +14,9 @@ html {
  * Global layout stuff
  */
  
-nav {
-  font-family: 'Bungee', sans-serif;
-}
-
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #eceef4;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -28,3 +24,12 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
