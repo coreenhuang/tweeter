@@ -1,0 +1,42 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: black;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.new-tweet h2 {
+  font-family: Bungee;
+  color: rgb(222, 98, 244);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+textarea {
+  border-top: aliceblue;
+  border-left: aliceblue;
+  border-right: aliceblue;
+  border-width: thick;
+  background: transparent;
+}
+
+.new-tweet div {
+  font-family: Bungee;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+button {
+  color: rgb(255, 255, 255);
+  background-color: rgb(233, 67, 238);
+  border: blueviolet;
+}
