@@ -19,6 +19,10 @@ form {
   width: 90%;
 }
 
+label {
+  margin-top: 2em;
+}
+
 textarea {
   border-top: aliceblue;
   border-left: aliceblue;
