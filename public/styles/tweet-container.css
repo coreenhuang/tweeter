@@ -9,6 +9,10 @@
   margin-bottom: 2em;
 }
 
+.tweets-container {
+  width: 100%;
+}
+
 .posted-tweets:hover {
   box-shadow: 5px 5px 5px #4056A1;
 }
