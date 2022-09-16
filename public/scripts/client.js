@@ -56,11 +56,13 @@ $(document).ready(function() {
     const textArea = $(this).children()[1];
 
     if (!$(textArea).val()) {
-      return alert('error blank form');
+      $('#error')[0].innerHTML = 'Please do not enter a blank form.'
+      return $('#error').slideDown();
     }
     
     if ($(textArea).val().length > 140) {
-      return alert('error too many characters');
+      $('#error')[0].innerHTML = 'Please do not exceed 140 characters.'
+      return $('#error').slideDown();
     }
     
     $.post("/tweets", $(this).serialize())
@@ -70,6 +72,7 @@ $(document).ready(function() {
         $('.tweets-container').prepend(createTweetElement(tweets[tweets.length - 1]));
         $(textArea).val('');
         $('.counter').val(140);
+        $('#error').slideUp();
       })
     })
 

@@ -40,3 +40,10 @@ button {
   background-color: rgb(233, 67, 238);
   border: blueviolet;
 }
+
+#error {
+  color: red;
+  border: solid red thick;
+  padding: 1em;
+  display: none;
+}
