@@ -60,11 +60,17 @@ $(document).ready(function() {
   $('form').submit(function(event) {
     event.preventDefault();
     const textArea = $(this).children()[1];
-    console.log($(textArea).val());
 
+    if (!$(textArea).val()) {
+      return alert('error blank form');
+    }
+    
+    if ($(textArea).val().length > 140) {
+      return alert('error too many characters');
+    }
+    
     $.post("/tweets", $(this).serialize());
-
-    console.log($(this).serialize());
+    
   })
 
   const loadTweets = function() {
