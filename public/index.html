@@ -22,6 +22,8 @@
 
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -41,7 +43,7 @@
       </div>
     </nav>
     
-    <header>
+    <header class="main-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -65,10 +67,32 @@
         </form>
       </section>
 
-      <article>
+      <section class="posted-tweets">
+        <header>
+          <div>
+            <p>Avatar</p>
+          </div>
+          <div id="handle">
+            <p>Handle</p>
+          </div>
+        </header>
 
-      </article>
-      
+        <article>
+          <p>Test Article</p>
+        </article>
+
+        <footer>
+          <div>
+            <p>Timestamp</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-flag icons"></i>
+            <i class="fa-solid fa-retweet icons"></i>
+            <i class="fa-solid fa-heart icons"></i>
+          </div>
+        </footer>
+      </section>
+
     </main>
   </body>
 </html>
