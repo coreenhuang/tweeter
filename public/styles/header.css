@@ -8,3 +8,15 @@
   background-color: #c46acc;
   background-image: url("https://www.transparenttextures.com/patterns/silver-scales.png");
 }
+
+
+@media (min-width: 1024px) {
+  .main-header {
+    margin-top: 9em;
+    margin-bottom: 3em;
+    margin-right: 3em;
+    margin-left: 3em;
+    max-width: 500px;
+    max-height: 450px;
+  }
+}
