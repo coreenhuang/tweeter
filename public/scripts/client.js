@@ -5,6 +5,12 @@
  */
 $(document).ready(function() {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(tweetData) {
 
   const convertedTime = timeago.format(tweetData.created_at);
@@ -21,7 +27,7 @@ $(document).ready(function() {
     </header>
 
     <article>
-      <p>${tweetData.content.text}</p>
+      <p>${escape(tweetData.content.text)}</p>
     </article>
 
     <footer>
