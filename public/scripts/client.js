@@ -82,4 +82,14 @@ $(document).ready(function() {
 
   renderTweets(data);
 
+  $('form').submit(function(event) {
+    event.preventDefault();
+    const textArea = $(this).children()[1];
+    console.log($(textArea).val());
+
+    $.post("/tweets", $(this).serialize());
+
+    console.log($(this).serialize());
+  })
+
 });
