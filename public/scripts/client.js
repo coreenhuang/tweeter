@@ -5,18 +5,6 @@
  */
 $(document).ready(function() {
 
-  const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-      },
-    "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-    "created_at": 1461116232227
-  }
-
   const createTweetElement = function(tweetData) {
 
   const convertedTime = timeago.format(tweetData.created_at);
@@ -69,8 +57,16 @@ $(document).ready(function() {
       return alert('error too many characters');
     }
     
-    $.post("/tweets", $(this).serialize());
-    
+    $.post("/tweets", $(this).serialize())
+    .then(function() {
+      $.ajax('/tweets', { method: 'GET' })
+      .then(function(tweets) {
+        $('.tweets-container').prepend(createTweetElement(tweets[tweets.length - 1]));
+        $(textArea).val('');
+        $('.counter').val(140);
+      })
+    })
+
   })
 
   const loadTweets = function() {
