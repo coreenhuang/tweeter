@@ -22,6 +22,5 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-![""]()
-![""]()
-![""]()
+!["Screenshot of Desktop View"](https://github.com/coreenhuang/tweeter/blob/master/docs/desktop-view.png?raw=true)
+!["Screenshot of Tablet View"](https://github.com/coreenhuang/tweeter/blob/master/docs/tablet-view.png?raw=true)
