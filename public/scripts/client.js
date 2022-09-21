@@ -51,6 +51,7 @@ $(document).ready(function() {
     }
   };
 
+  // tweets submission form
   $('form').submit(function(event) {
     event.preventDefault();
     const textArea = $(this).children()[1];
@@ -65,6 +66,7 @@ $(document).ready(function() {
       return $('#error').slideDown();
     }
     
+  // add new tweet to top and reset form upon submission
     $.post("/tweets", $(this).serialize())
     .then(function() {
       $.ajax('/tweets', { method: 'GET' })
@@ -81,7 +83,8 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET' })
     .then(function (tweets) {
-      renderTweets(tweets);
+      const reserveTweets = tweets.reverse();
+      renderTweets(reserveTweets);
     });
   }
 

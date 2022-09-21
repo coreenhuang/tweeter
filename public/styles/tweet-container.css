@@ -30,6 +30,10 @@
   font-size: 0.75em;
 }
 
+.posted-tweets article {
+  overflow-wrap: break-word;
+}
+
 .icons {
   color: #4056A1;
 }

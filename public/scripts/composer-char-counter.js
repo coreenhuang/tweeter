@@ -1,3 +1,5 @@
+// update counter while typing tweet
+
 $(document).ready(function() {
   console.log('ready!');
 
